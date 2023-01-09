@@ -32,17 +32,20 @@ console.log("Array Cardio Day 1 💪")
 // 1. Filter the list of inventors for those who were born in the 1500's
 let fifteens = inventors.filter(inventor => inventor.year >= 1500 && inventor.year < 1600)
 console.table(fifteens)
+console.log("Inventors born in the 1500's (.filter)")
 
 // Array.prototype.map()
 // 2. Give us an array of the inventors first and last names
 let names = inventors.map(inventor => `${inventor.first} ${inventor.last}`)
 console.table(names)
+console.log("Inventors first & last names (.map)")
 
 // Array.prototype.sort()
 // 3. Sort the inventors by birthdate, oldest to youngest
-console.log(inventors.sort(function(a, b) {
+console.table(inventors.sort(function(a, b) {
     return a.year - b.year
 }))
+console.log("Inventors sorted by birthdate (.sort)")
 
 // Array.prototype.reduce()
 // 4. How many years did all the inventors live all together?
