@@ -26,6 +26,8 @@ const people = [
   'Billings, Josh', 'Birrell, Augustine', 'Blair, Tony', 'Beecher, Henry', 'Biondo, Frank'
 ];
 
+console.log("Array Cardio Day 1 💪")
+
 // Array.prototype.filter()
 // 1. Filter the list of inventors for those who were born in the 1500's
 
