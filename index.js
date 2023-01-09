@@ -42,9 +42,7 @@ console.log("Inventors first & last names (.map)")
 
 // Array.prototype.sort()
 // 3. Sort the inventors by birthdate, oldest to youngest
-console.table(inventors.sort(function(a, b) {
-    return a.year - b.year
-}))
+console.table(inventors.sort((a, b) => a.year - b.year))
 console.log("Inventors sorted by birthdate (.sort)")
 
 // Array.prototype.reduce()
