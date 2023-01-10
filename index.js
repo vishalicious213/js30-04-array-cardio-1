@@ -56,22 +56,30 @@ console.log("4. Total years all inventors lived:", totalYears)
 // 5. Sort the inventors by years lived
 scientists = inventors.sort((a, b) => (a.passed - a.year) - (b.passed - b.year))
 console.table(scientists)
+console.log("5. Sort inventors by years lived (.sort)")
 
 // wrote this function to see the actual age of each inventor and conform that code above was right
 // We're taking data from inventor and using it to make a new array of objects
 let ages = inventors.map(inventor => {
     let person = {
-        "name": inventor.last,
+        "first": inventor.first,
+        "last": inventor.last,
         "age": inventor.passed - inventor.year
     }
     return person
 })
 console.table(ages.sort())
-console.log("5. Sort inventors by years lived (.sort)")
+console.log("5. Wrote this check for #5 to confirm ages (.map => object, .sort)")
 
 // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
 // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
 
+// const container = document.querySelector(".mw-content-ltr") // used DevTools and got container class
+// const links = document.querySelectorAll(".mw-content-ltr a") // grabbed all links in container
+const links = Array.from(document.querySelectorAll(".mw-content-ltr a")) // turned NodeList into array so we can use .map
+// const de = links.map(link => link.textContent) // get only the textContent from each <a>
+const de = links.map(link => link.textContent).filter(streetName => streetName.includes("de")) // filtered the textContent to only include strings with "de"
+console.log("6. Go to Wikipedia link and run code in this section. Console.log 'de' to see results.")
 
 // 7. sort Exercise
 // Sort the people alphabetically by last name
