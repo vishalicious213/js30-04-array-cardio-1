@@ -89,3 +89,18 @@ console.log("7. Sort people by last name (.sort)")
 // 8. Reduce Exercise
 // Sum up the instances of each of these
 const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
+
+const countTransports = data.reduce(function(obj, item) {
+    if (!obj[item]) {
+        obj[item] = 0
+    }
+
+    obj[item]++
+
+    // console.log(item)
+    return obj
+    // console.log("obj", obj)
+}, {})
+
+console.log(countTransports)
+console.log("8. Tally instances of transportation types (.reduce, object)")
