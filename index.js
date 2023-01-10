@@ -83,6 +83,8 @@ console.log("6. Go to Wikipedia link and run code in this section. Console.log '
 
 // 7. sort Exercise
 // Sort the people alphabetically by last name
+console.table(people.sort())
+console.log("7. Sort people by last name (.sort)")
 
 // 8. Reduce Exercise
 // Sum up the instances of each of these
